@@ -62,7 +62,7 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
     # find_by name/breed
-    if self.find_by_name(name)
+    if 
 
   end
 
