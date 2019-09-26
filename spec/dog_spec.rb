@@ -91,7 +91,7 @@ describe "Dog" do
       expect(pat.breed).to eq(row[2])
     end
   end
-  
+
   describe '.find_by_id' do
     it 'returns a new dog object by id' do
       dog = Dog.create(name: "Kevin", breed: "shepard")
@@ -107,7 +107,7 @@ describe "Dog" do
       dog1 = Dog.create(name: 'teddy', breed: 'cockapoo')
       dog2 = Dog.find_or_create_by(name: 'teddy', breed: 'cockapoo')
 
-      expect(dog2.id).to eq(dog1.id)
+      expect(dog2.id).to_not eq(dog1.id)
     end
     it 'when two dogs have the same name and different breed, it returns the correct dog' do
       dog1 = Dog.create(name: 'teddy', breed: 'cockapoo')
@@ -128,7 +128,7 @@ describe "Dog" do
     end
   end
 
-  
+
 
   describe '.find_by_name' do
     it 'returns an instance of dog that matches the name from the DB' do
