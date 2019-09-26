@@ -71,8 +71,7 @@ class Dog
     if dog != nil
       dog
     else self.create(name, breed)
-
-
+    end
   end
 
   def self.find_by_name(name)
