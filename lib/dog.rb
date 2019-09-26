@@ -62,7 +62,10 @@ class Dog
 
   def self.find_or_create_by(name:, breed:)
     # find_by name/breed
-    if 
+    sql = <<-SQL
+    SELECT * FROM dogs WHERE name = ? LIMIT 1
+    SQL
+    if
 
   end
 
