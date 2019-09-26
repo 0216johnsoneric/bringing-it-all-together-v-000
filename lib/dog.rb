@@ -70,7 +70,7 @@ class Dog
       end.first
     if dog != nil
       dog
-    else self.create 
+    else self.create(name, breed)
 
 
   end
